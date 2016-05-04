@@ -1,0 +1,26 @@
+{
+  "name": "home-dht11",
+  "version": "1.0.0",
+  "description": "api(?) for temperature sensor",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.13.4",
+    "mongoose": "^4.4.14",
+    "node-dht-sensor": "^0.0.11",
+    "socket.io": "^1.4.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rascada/home-dht11.git"
+  },
+  "author": "Damian Martyniak <rascada>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rascada/home-dht11/issues"
+  },
+  "homepage": "https://github.com/rascada/home-dht11#readme"
+}
