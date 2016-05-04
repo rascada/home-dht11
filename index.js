@@ -28,11 +28,12 @@ class Thermometer {
   }
 
   socket(socket) {
-    
+    console.log('connected');
   }
 
   temp() {
     this.circs = dht.read();
+    this.io.sockets.emit('circs', this.circs);
     console.log('update', new Date().toLocaleTimeString(), this.circs);
     Circs.create(this.circs);
   }
