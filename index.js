@@ -29,8 +29,8 @@ class Thermometer {
 
   recordsEmit(socket) {
     Circs
-      .find()
-      .then(circs => socket.emit('records', circs.length));
+      .count()
+      .then(amount => socket.emit('records', amount));
   }
 
   temp() {
