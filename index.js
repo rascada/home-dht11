@@ -19,16 +19,18 @@ class Thermometer {
 
     mg.connect('localhost', 'temp');
 
-    Circs
-      .find()
-      .then(circs => console.log(circs.length));
-
     dht.initialize(11, 16);
     setInterval(this.temp.bind(this), 3000);
   }
 
   socket(socket) {
-    console.log('connected');
+    socket.on('records', this.recordsEmit.bind(this, socket));
+  }
+
+  recordsEmit(socket) {
+    Circs
+      .find()
+      .then(circs => socket.emit('records', circs.length));
   }
 
   temp() {
