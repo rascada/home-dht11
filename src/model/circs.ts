@@ -1,4 +1,4 @@
-module.exports = function(mg) {
+export function CircsModel(mg) {
   return mg.model('circs', {
     temperature: Number,
     humidity: Number,
